@@ -39,7 +39,7 @@ class ProductsController extends Controller
     }
 
     public function show(Product $product)
-    {
+    {   
         return view('shop/products/show', ['product' => $product]);
     }
 }

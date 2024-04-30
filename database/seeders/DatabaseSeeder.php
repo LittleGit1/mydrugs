@@ -4,6 +4,7 @@ namespace Database\Seeders;
 
 use App\Models\Product;
 use App\Models\ProductCategory;
+use App\Models\ProductReview;
 use App\Models\ProductSubcategory;
 use App\Models\User;
 // use Illuminate\Database\Console\Seeds\WithoutModelEvents;
@@ -237,6 +238,7 @@ class DatabaseSeeder extends Seeder
 
         Product::factory(400)->create();
 
+        ProductReview::factory(1000)->create();
       
     }
 }
