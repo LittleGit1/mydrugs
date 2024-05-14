@@ -30,11 +30,7 @@ class DatabaseSeeder extends Seeder
             'slug'      => 'stimulants',
             'description'   => 'Stimulants accelerate messages travelling between the brain and body. They can make a person feel more awake, alert, confident or energetic. They can also cause a person to feel anxious, aggressive or paranoid. Common stimulants include methamphetamine (ice), amphetamines, cocaine, nicotine and caffeine.'
         ]);
-        ProductCategory::factory()->create([
-            'name'      => 'Dissociatives',
-            'slug'      => 'dissociatives',
-            'description'   => 'Dissociatives are a type of psychedelic drug. They can cause a person to feel disconnected from their body or physical environment. They can also distort physical senses, such as taste, touch, sight, sound and smell. Common dissociatives are ketamine and nitrous oxide.'
-        ]);
+
         ProductCategory::factory()->create([
             'name'      => 'Cannabinoids',
             'slug'      => 'cannabinoids',

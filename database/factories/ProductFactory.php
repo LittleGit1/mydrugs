@@ -21,15 +21,17 @@ class ProductFactory extends Factory
      */
     public function definition(): array
     {
+        $category = ProductCategory::with(['subcategories'])->inRandomOrder()->first();
+
         return [
-            'name'              => fake()->text(30),
+            'name'              => fake()->text(20),
             'description'       => fake()->text(),
             'price'             => fake()->numberBetween(4, 20),
             'active'            => fake()->boolean(),
             'stock_quantity'    => 0,
             'seller_id'         => User::inRandomOrder()->first()->id,
-            'product_category_id'  => ProductCategory::inRandomOrder()->first()->id,
-            'product_subcategory_id' => ProductSubcategory::inRandomOrder()->first()->id,
+            'product_category_id'  => $category->id,
+            'product_subcategory_id' => $category->subcategories->random()->id
         ];
     }
 }
